@@ -1,9 +1,9 @@
 {
   "name": "fs.readfile-memory-leak",
   "version": "0.0.1",
-  "description": "Adjustment of the memory leaks of fs.readfile in nodejs",
+  "description": "Adjustment of the memory leaks of jest",
   "main": "leak.js",
-  "repository": "https://github.com/siluri/node-fs.readfile-memory-leak.git",
+  "repository": "https://github.com/siluri/fs.readfile-memory-leak.git",
   "author": "JGo",
   "license": "UNLICENSED",
   "scripts": {
