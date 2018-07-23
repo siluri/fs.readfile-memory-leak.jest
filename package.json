@@ -1,0 +1,22 @@
+{
+  "name": "node-fs.readfile-memory-leak",
+  "version": "0.0.1",
+  "description": "Adjustment of the memory leaks of fs.readfile in nodejs",
+  "main": "leak.js",
+  "repository": "https://github.com/siluri/node-fs.readfile-memory-leak.git",
+  "author": "JGo",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start-gc": "node --expose-gc leak.js",
+    "start": "node leak.js",
+    "test-gc": "node --expose-gc ./node_modules/jest/bin/jest --runInBand --no-cache --logHeapUsage",
+    "test": "jest --runInBand --no-cache --logHeapUsage"
+  },
+  "dependencies": {
+    "archiver": "^2.1.1",
+    "fs-extra": "^7.0.0",
+    "graceful-fs": "^4.1.11",
+    "jest": "^23.4.1",
+    "lodash": "^4.17.10"
+  }
+}
