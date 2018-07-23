@@ -1,5 +1,5 @@
 {
-  "name": "node-fs.readfile-memory-leak",
+  "name": "fs.readfile-memory-leak",
   "version": "0.0.1",
   "description": "Adjustment of the memory leaks of fs.readfile in nodejs",
   "main": "leak.js",
