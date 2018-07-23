@@ -138,3 +138,26 @@ Time:        5.47s
 Ran all test suites.
 Done in 6.42s.
 ```
+
+#### ✔️result with node fs & jszip
+```bash
+$ node --expose-gc ./node_modules/jest/bin/jest --runInBand --no-cache --logHeapUsage
+ PASS  __tests__/leak.test.js (1).js (41 MB heap size)
+ PASS  __tests__/leak.test.js (11).js (41 MB heap size)
+ PASS  __tests__/leak.test.js (2).js (41 MB heap size)
+ PASS  __tests__/leak.test.js (3).js (41 MB heap size)
+ PASS  __tests__/leak.test.js (10).js (41 MB heap size)
+ PASS  __tests__/leak.test.js (5).js (41 MB heap size)
+ PASS  __tests__/leak.test.js (6).js (42 MB heap size)
+ PASS  __tests__/leak.test.js (7).js (42 MB heap size)
+ PASS  __tests__/leak.test.js (8).js (42 MB heap size)
+ PASS  __tests__/leak.test.js (9).js (42 MB heap size)
+ PASS  __tests__/leak.test.js (4).js (42 MB heap size)
+
+Test Suites: 11 passed, 11 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        4.487s
+Ran all test suites.
+Done in 5.39s.
+```
