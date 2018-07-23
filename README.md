@@ -25,7 +25,7 @@ If one of the LEAKY dependencies is commented into leak.js, memory per file is n
 // const archiver = require('archiver'); //TODO: LEAKY
 ```
 
-#### result without one of "leaky" moduls. 
+#### ✔️result without one of "leaky" moduls. 
 ```bash
 $ node --expose-gc ./node_modules/jest/bin/jest --runInBand --no-cache --logHeapUsage
  PASS  __tests__/leak.test.js (1).js (40 MB heap size)
@@ -48,7 +48,7 @@ Ran all test suites.
 Done in 5.05s.
 ```
 
-#### result with fs-extra
+#### ❌ result with fs-extra
 ```bash
 $ node --expose-gc ./node_modules/jest/bin/jest --runInBand --no-cache --logHeapUsage
  PASS  __tests__/leak.test.js (1).js (40 MB heap size)
@@ -71,7 +71,7 @@ Ran all test suites.
 Done in 5.71s.
 ```
 
-#### result with graceful-fs
+#### ❌ result with graceful-fs
 ```bash
 $ node --expose-gc ./node_modules/jest/bin/jest --runInBand --no-cache --logHeapUsage
  PASS  __tests__/leak.test.js (1).js (40 MB heap size)
@@ -93,7 +93,7 @@ Time:        4.682s
 Ran all test suites.
 Done in 5.57s.
 ```
-#### result with node fs & archiver
+#### ❌ result with node fs & archiver
 ```bash
 $ node --expose-gc ./node_modules/jest/bin/jest --runInBand --no-cache --logHeapUsage
  PASS  __tests__/leak.test.js (1).js (43 MB heap size)
@@ -116,4 +116,25 @@ Ran all test suites.
 Done in 6.26s.
 ```
 
+#### ✔️result with node fs & fast-glob
+```bash
+$ node --expose-gc ./node_modules/jest/bin/jest --runInBand --no-cache --logHeapUsage
+ PASS  __tests__/leak.test.js (1).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (11).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (2).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (3).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (10).js (46 MB heap size)
+ PASS  __tests__/leak.test.js (5).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (7).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (6).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (9).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (8).js (43 MB heap size)
+ PASS  __tests__/leak.test.js (4).js (46 MB heap size)
 
+Test Suites: 11 passed, 11 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        5.47s
+Ran all test suites.
+Done in 6.42s.
+```
