@@ -1,3 +1,5 @@
+Repo for Memory Leak reproduce in module loading by jest - [6738](https://github.com/facebook/jest/issues/6738)
+
 ### requirement
 Tried on both node versions on win10pro
 ```
