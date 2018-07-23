@@ -1,3 +1,10 @@
+### requirement
+Tried on both node versions on win10pro
+```
+node@10.6.0x64
+node@8.11.3x64
+```
+
 ### description
 here it is shown that the modules fs-extra graceful-fs and archiver allocate within the jest test memory, which they no longer release.
 
